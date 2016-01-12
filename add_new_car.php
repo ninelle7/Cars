@@ -43,7 +43,7 @@ if(!empty($_REQUEST['url_site'])){
 
 if ($brand!="" && $model!="" && $price!="" && $title!="" && $description!="" && $engine!="" && $max_speed!="" && $url_site!="" ) {
     
-    $mysqli = new mysqli('localhost', 'root', '', 'Lessons'); 
+    $mysqli = new mysqli('localhost', 'root', '', 'Cars'); 
 
     if (mysqli_connect_errno()) { 
     echo "Error: ".mysqli_connect_error(); 
@@ -51,7 +51,7 @@ if ($brand!="" && $model!="" && $price!="" && $title!="" && $description!="" && 
     } 
     mysqli_set_charset($mysqli, 'utf8');
 
-$stmt = $mysqli->prepare("INSERT INTO `Lessons`.`cars` (`brand`, `model`, `price`, `title`, `description`, `engine`, `max_speed`, `url_site`) VALUES (?, ?, ?, ?, ?, ?, ?, ?);"); 
+$stmt = $mysqli->prepare("INSERT INTO `Cars`.`cars` (`brand`, `model`, `price`, `title`, `description`, `engine`, `max_speed`, `url_site`) VALUES (?, ?, ?, ?, ?, ?, ?, ?);"); 
 $stmt->bind_param('ssisssss', $brand, $model, $price, $title, $description, $engine, $max_speed, $url_site);
 
 $stmt->execute(); 
@@ -98,7 +98,7 @@ $mysqli->close();
                       
              <div class="input-group input-group-lg" style="margin:100px auto;">
             
-                    <form action="http://localhost/Lessons/add_new_car.php">
+                    <form action="http://localhost/Cars/add_new_car.php">
                         
                         <div style="float:left;width:500px;margin: auto;">
                  <input required name="brand" class="form-control" type="text" placeholder="Brand" aria-describedby="basic-addon2" value="<?php echo $brand; ?>"> 

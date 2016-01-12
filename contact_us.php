@@ -20,14 +20,14 @@ if(!empty($_REQUEST['message'])){
 
 if ($name!=""&& $email!=""&& $message!="") {
     
-    $mysqli = new mysqli('localhost', 'root', '', 'Lessons'); 
+    $mysqli = new mysqli('localhost', 'root', '', 'Cars'); 
 
     if (mysqli_connect_errno()) { 
     echo "Error: ".mysqli_connect_error(); 
     exit(); 
     } 
     
-    $stmt = $mysqli->prepare("INSERT INTO `Lessons`.`contact_us` (`name`, `email`, `message`) VALUES (?, ?, ?);"); 
+    $stmt = $mysqli->prepare("INSERT INTO `Cars`.`contact_us` (`name`, `email`, `message`) VALUES (?, ?, ?);"); 
     $stmt->bind_param('sss', $name, $email, $message); 
 
 

@@ -50,7 +50,7 @@ if (!empty($_COOKIE['country'])) {
 }
  
 $dbHost = "localhost";
-$dbBase = "Lessons";
+$dbBase = "Cars";
 $dbUser = "root";
 $dbPass = "";
 

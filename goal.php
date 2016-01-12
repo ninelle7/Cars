@@ -1,6 +1,6 @@
 <?php
 $dbHost = "localhost";
-$dbBase = "Lessons";
+$dbBase = "Cars";
 $dbUser = "root";
 $dbPass = "";
 
